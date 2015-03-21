@@ -4,6 +4,13 @@ TUN_DEV_FILE = `sh osflags dev $(MODE)`
 GCC = gcc
 GPP = g++
 
+PREFIX = /usr/local
+BINDIR = $(prefix)/bin
+SHAREDIR = $(prefix)/share
+MANDIR = $(sharedir)/man
+MAN1DIR = $(mandir)/man1
+
+
 .PHONY: directories
 
 all: directories hans
@@ -59,3 +66,8 @@ clean:
 
 build/tunemu.o: src/tunemu.h src/tunemu.c
 	$(GCC) -c src/tunemu.c -o build/tunemu.o
+
+
+install: all
+    install hans $(DESTDIR)$(BINDIR)
+
