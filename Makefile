@@ -69,5 +69,5 @@ build/tunemu.o: src/tunemu.h src/tunemu.c
 
 
 install: all
-    install hans $(DESTDIR)$(BINDIR)
+	install hans $(DESTDIR)$(BINDIR)
 
