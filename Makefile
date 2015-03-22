@@ -72,5 +72,5 @@ install: all
 	install hans $(DESTDIR)$(BINDIR)
 
 uninstall:
-    -rm $(DESTDIR)$(BINDIR)/hans
+	-rm $(DESTDIR)$(BINDIR)/hans
     
